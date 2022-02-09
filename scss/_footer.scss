@@ -1,0 +1,23 @@
+/* rodapé do blog */
+.footer {
+  border-top: 1px solid $light-grey;
+  width: 80%;
+  text-align: center;
+  padding: 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+  //posicionamento do rodapé na parte inferior da tela
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+
+  &-logo {
+    max-width: 100px;
+  }
+
+  &-txt {
+    margin: auto;
+    @include fontSize(14px);
+  }
+}

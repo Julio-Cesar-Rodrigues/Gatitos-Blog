@@ -1,0 +1,106 @@
+.about {
+  @include for-phone-only {
+    width: 90%;
+  }
+
+  width: 80%;
+  margin: 0 auto 40px;
+  font-family: arial, Helvetica, sans-serif;
+
+  &-title {
+    background-color: $light-grey;
+    text-align: center;
+    padding: 20px;
+  }
+
+  &-h1 {
+    @include fontSize(22px);
+    color: $dark-grey;
+    letter-spacing: 1px;
+
+    @extend %no-margin-top,
+      %no-margin-left,
+      %half-margin-right,
+      %half-margin-bottom;
+  }
+
+  .breadcrumb {
+    @include flx(justify-content, center);
+
+    align-items: center;
+
+    &-link {
+      @include fontSize(12px);
+
+      text-decoration: none;
+      color: $dark-grey;
+
+      &:hover {
+        text-decoration: underline;
+        color: $purple;
+      }
+    }
+
+    &-img {
+      width: 10px;
+      margin: 8px;
+    }
+  }
+
+  &-img {
+    width: 100%;
+
+    @extend %double-margin-bottom;
+  }
+
+  &-intro {
+    font-weight: 100;
+    color: $dark-grey;
+    width: 70%;
+    margin: 30px auto;
+    text-align: center;
+
+    @include fontSize(16px);
+
+    @include for-phone-only {
+      width: 90%;
+    }
+
+    @include for-tablet-only {
+      width: 80%;
+    }
+  }
+
+  &-split {
+    @include flx(justify-content, center);
+
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &-img-description {
+    width: $img-width;
+
+    @include for-phone-only {
+      width: 80%;
+    }
+  }
+
+  //interpolação: voce usa a variavel com #{$nome-da-variavel}
+
+  &-txt {
+    width: calc(100% - #{$img-width});
+
+    @include for-phone-only {
+      width: 90%;
+      text-align: center;
+    }
+  }
+
+  &-p {
+    @include fontSize(14px);
+
+    padding: 10px 20px;
+    color: $dark-grey;
+  }
+}
